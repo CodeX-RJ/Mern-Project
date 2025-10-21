@@ -13,7 +13,7 @@ const NoteDetailPage = () => {
   useEffect(() => {
     const fetchNote = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/posts/${id}`);
+        const res = await axios.get(`https://mynotes-mern.onrender.com/api/posts/${id}`);
         setNote(res.data);
       } catch (err) {
         console.error(err);
