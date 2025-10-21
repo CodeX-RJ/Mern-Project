@@ -10,7 +10,7 @@ const CreatePage = () => {
 
   const handleSave = async () => {
     try {
-      await axios.post("http://localhost:3000/api/posts", {
+      await axios.post("https://mynotes-mern.onrender.com/api/posts", {
         title: noteTitle,
         description: noteBody,
       });

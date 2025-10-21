@@ -25,7 +25,7 @@ const NoteDetailPage = () => {
   // Delete note
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/api/posts/${id}`);
+      await axios.delete(`https://mynotes-mern.onrender.com/api/posts/${id}`);
       navigate("/"); // go back to homepage
     } catch (err) {
       console.error(err);

@@ -10,7 +10,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/posts');
+        const response = await axios.get('https://mynotes-mern.onrender.com/api/posts');
         setNotes(response.data);
       } catch (error) {
         console.error('Error fetching notes:', error);
@@ -24,7 +24,7 @@ const HomePage = () => {
   const handleDelete = async (id) => {
     try {
       // Send delete request to backend
-      await axios.delete(`http://localhost:3000/api/posts/${id}`);
+      await axios.delete(`https://mynotes-mern.onrender.com/api/posts/${id}`);
 
       // Remove note from frontend state
       setNotes((prevNotes) => prevNotes.filter((note) => note._id !== id));
